@@ -2,7 +2,7 @@
 
 ## Overview
 
-This repository contains a PyTorch implementation of the ["Human Mobility Prediction Challenge: Next Location Prediction using Spatiotemporal BERT"](https://dl.acm.org/doi/10.1145/3615894.3628498) method, as part of the [HuMob Challenge 2023](https://connection.mit.edu/humob-challenge-2023).
+This repository contains an **unofficial** PyTorch implementation of the ["Human Mobility Prediction Challenge: Next Location Prediction using Spatiotemporal BERT"](https://dl.acm.org/doi/10.1145/3615894.3628498) method, as part of the [HuMob Challenge 2023](https://connection.mit.edu/humob-challenge-2023).
 
 ## Setup
 
