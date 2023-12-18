@@ -54,10 +54,10 @@ def task1(args):
                 pre_x, pre_y = pred[-1][0].item(), pred[-1][1].item()
 
             pred = torch.stack(pred)
-            generated = torch.cat((data['d'][pred_mask].unsqueeze(-1), data['t'][pred_mask].unsqueeze(-1), pred), dim=-1).cpu().tolist()
+            generated = torch.cat((data['d'][pred_mask].unsqueeze(-1)-1, data['t'][pred_mask].unsqueeze(-1)-1, pred+1), dim=-1).cpu().tolist()
             generated = [tuple(x) for x in generated]
 
-            reference = torch.cat((data['d'][pred_mask].unsqueeze(-1), data['t'][pred_mask].unsqueeze(-1), label[pred_mask]), dim=-1).cpu().tolist()
+            reference = torch.cat((data['d'][pred_mask].unsqueeze(-1)-1, data['t'][pred_mask].unsqueeze(-1)-1, label[pred_mask]+1), dim=-1).cpu().tolist()
             reference = [tuple(x) for x in reference]
             
             result['generated'].append(generated)
